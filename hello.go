@@ -35,4 +35,9 @@ jejrt jejrj`
 	for i, v := range arr_str {
 		fmt.Printf("index: %d, value: %s\n", i, v)
 	}
+
+	var buah = []string{"nanas", "pear", "mango", "klengkeng", "pisang"}
+	fmt.Println("panjang array/slice buah:", len(buah))
+	fmt.Println("capasitas array/slice buah:", cap(buah))
+	
 }
