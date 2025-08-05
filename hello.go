@@ -40,4 +40,10 @@ jejrt jejrj`
 	fmt.Println("panjang array/slice buah:", len(buah))
 	fmt.Println("capasitas array/slice buah:", cap(buah))
 	
+	dst := make([]string, 5)
+	src := []string{"apel", "jeruk", "anggur", "kiwi", "semangka"}
+	n := copy(dst, src)
+	fmt.Println("dst:", dst)
+	fmt.Println("src:", src)
+	fmt.Println("jumlah elemen yang disalin:", n)
 }
