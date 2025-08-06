@@ -1,6 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt" 
+	"math/rand" 
+	"time"
+)
+
+var randomizer = rand.New(rand.NewSource(time.Now().UnixNano()))
+
+func randomWithRange(min, max int) int {
+	return randomizer.Intn(max-min) + min
+}
 
 func main() {
 	var asd int = 23940
@@ -46,4 +56,16 @@ jejrt jejrj`
 	fmt.Println("dst:", dst)
 	fmt.Println("src:", src)
 	fmt.Println("jumlah elemen yang disalin:", n)
+
+	var chicken map[string]int
+	chicken = map[string]int{}
+
+	chicken["ayam kampung"] = 10
+	chicken["ayam potong"] = 20
+	fmt.Println("jumlah ayam kampung:", chicken["ayam kampung"])
+	fmt.Println("jumlah ayam potong:", chicken["ayam potong"])
+	fmt.Println("nor", chicken["soto ayam"])
+
+	randomValue := randomWithRange(1, 100)
+	fmt.Println("random value:", randomValue)
 }
