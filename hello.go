@@ -4,12 +4,23 @@ import (
 	"fmt" 
 	"math/rand" 
 	"time"
+	"math"
 )
 
 var randomizer = rand.New(rand.NewSource(time.Now().UnixNano()))
 
 func randomWithRange(min, max int) int {
 	return randomizer.Intn(max-min) + min
+}
+
+func calculate(d float64) (float64, float64) {
+    // hitung luas
+    var area = math.Pi * math.Pow(d / 2, 2)
+    // hitung keliling
+    var circumference = math.Pi * d
+
+    // kembalikan 2 nilai
+    return area, circumference
 }
 
 func main() {
@@ -68,4 +79,9 @@ jejrt jejrj`
 
 	randomValue := randomWithRange(1, 100)
 	fmt.Println("random value:", randomValue)
+
+	var diameter float64 = 10.0
+	area, circumference := calculate(diameter)
+	fmt.Printf("Luas lingkaran dengan diameter %.2f adalah %.2f\n", diameter, area)
+	fmt.Printf("Keliling lingkaran dengan diameter %.2f adalah %.2f\n", diameter, circumference) 
 }
