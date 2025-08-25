@@ -84,4 +84,6 @@ jejrt jejrj`
 	area, circumference := calculate(diameter)
 	fmt.Printf("Luas lingkaran dengan diameter %.2f adalah %.2f\n", diameter, area)
 	fmt.Printf("Keliling lingkaran dengan diameter %.2f adalah %.2f\n", diameter, circumference) 
+
 }
+
