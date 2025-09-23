@@ -10,3 +10,8 @@ func SayHello() {
 func introduce(name string, age int) {
 	fmt.Printf("Name: %s, Age: %d\n", name, age)
 }
+
+type Student struct {
+	Name  string
+	Grade int
+}
