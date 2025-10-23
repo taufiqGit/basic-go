@@ -21,6 +21,7 @@ func validate(input string) (bool, error) {
 }
 
 func main() {
+	defer catch()
 	var input string
 	fmt.Print("Type some number: ")
 	fmt.Scanln(&input)
